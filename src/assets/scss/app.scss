@@ -1,0 +1,72 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+// 1. Set your own initial variables and derived
+//    variables in _variables.scss
+@import "variables";
+
+// 2. Setup your Custom Colors
+$linkedin: #0077b5;
+$linkedin-invert: findColorInvert($linkedin);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$github: #333;
+$github-invert: findColorInvert($github);
+
+@import "~bulma/sass/utilities/derived-variables";
+
+// 3. Add new color variables to the color map.
+$addColors: (
+  "twitter": (
+    $twitter,
+    $twitter-invert
+  ),
+  "linkedin": (
+    $linkedin,
+    $linkedin-invert
+  ),
+  "github": (
+    $github,
+    $github-invert
+  )
+);
+$colors: map-merge($colors, $addColors);
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+// 4. Provide custom buefy overrides and site styles here
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  overflow: hidden;
+  background: #1e1d1b;
+  color: #c3c3c3;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  border-radius: $radius;
+  background: #141311;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #a5b3bc;
+
+  &:hover {
+    color: #866e61;
+  }
+}
