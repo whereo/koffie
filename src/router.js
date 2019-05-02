@@ -13,12 +13,9 @@ export default new Router({
     },
     {
       path: "/add",
-      name: "machine",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
+      name: "add-machine",
       component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Machine.vue")
+        import(/* webpackChunkName: "machine" */ "./views/Machine.vue")
     }
   ]
 });

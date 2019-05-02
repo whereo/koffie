@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">trackmycoffee</router-link>
-      <router-link to="/add">Add</router-link>
+      <router-link to="/" class="brand">trackmycoffee</router-link>
     </nav>
-    <router-view/>
+    <router-view />
     <div class="about">
-      <a href="https://github.com/whereo/trackmycoffee">Crafted</a>&nbsp;with ❤ in Ulm
+      <a href="https://github.com/whereo/trackmycoffee">Crafted</a>&nbsp;with
+      &hearts; in Ulm
     </div>
   </div>
 </template>
@@ -21,17 +21,22 @@
 
 nav
   display: flex
-  justify-content: space-between
+  justify-content: center
   align-items: center
   width: 100%
   height: 60px
   padding: 20px 30px
 
-  a 
+  a
     font-weight: bold
 
-    &.router-link-exact-active 
+    &.router-link-exact-active
       color: #866e61
+
+.brand
+  font-family: 'SeaweedScript'
+  font-weight: 300
+  font-size: 35px
 
 .about
   display: flex

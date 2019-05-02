@@ -1,6 +1,7 @@
-// Included below are all the defined variables from Bulma
-// Modify as needed, removing the !default attribute.
-
+@font-face {
+  font-family: "SeaweedScript";
+  src: url("../fonts/SeaweedScript-Regular.ttf");
+}
 // Colors
 
 $black: hsl(0, 0%, 4%) !default;
@@ -62,8 +63,8 @@ $widescreen: 1152px + (2 * $gap) !default;
 $fullhd: 1344px + (2 * $gap) !default;
 
 // Miscellaneous
-
-$easing: ease-out !default;
+$timing: 0.2s;
+$easing: ease !default;
 $radius-small: 2px !default;
 $radius: 2px !default;
 $radius-large: 5px !default;

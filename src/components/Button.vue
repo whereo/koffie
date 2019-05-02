@@ -1,7 +1,9 @@
 <template>
   <div id="button">
     <div class="buttons has-addons">
-      <b-button type="is-primary" class="edit-button" @click="edit">edit</b-button>
+      <b-button type="is-primary" class="edit-button" @click="edit"
+        >edit</b-button
+      >
       <b-button type="is-primary" @click="track">track</b-button>
     </div>
   </div>
